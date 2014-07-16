@@ -3,7 +3,6 @@ module.exports = function (grunt) {
     // Set static dir
     var staticDir = grunt.option('static') || '';
     grunt.config.set('static', staticDir)
-    grunt.log.writeln(staticDir)
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),

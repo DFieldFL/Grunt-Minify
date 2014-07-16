@@ -16,6 +16,7 @@
 * cleanJsMin - Deletes the minified js files.
 * buildAll - Same as default plus it deletes the non-minified css files.
 
+### File Structure
 The static option is the base directory where you store your less, sass, css, and js files. This script expects the directory structure shown below.
 
     <static option>

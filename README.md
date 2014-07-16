@@ -18,14 +18,14 @@
 
 The static option is the base directory where you store your less, sass, css, and js files. This script expects the directory structure shown below.
 
-<static option>
-├── css
-│   ├── blah.css
-│   └── blah.min.css
-├── js
-│   ├── blah.js
-│   └── blah.min.js
-├── less
-│   └── blah.less
-└── sass
-    └── blah.scss
+    <static option>
+    ├── css
+    │   ├── blah.css
+    │   └── blah.min.css
+    ├── js
+    │   ├── blah.js
+    │   └── blah.min.js
+    ├── less
+    │   └── blah.less
+    └── sass
+        └── blah.scss

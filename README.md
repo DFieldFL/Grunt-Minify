@@ -2,9 +2,13 @@
 
 ## Installation and Setup
 1. Install Nodejs / npm
-2. Install Ruby and Sass
-3. Clone repo
-4. Install Node packages `npm install`
+2. Install Ruby (rbenv install only https://gorails.com/setup/ubuntu/14.04#ruby-rbenv)
+3. Install Bundler `gem install bundler`
+4. Clone repo
+3. Install ruby gems using bundler
+    1. `cd <cloned repo>`
+    2. `bundle install`
+5. Install Node packages `npm install`
 
 ## Running
 `grunt --static=static_files/`
@@ -19,7 +23,7 @@
 ### File Structure
 The static option is the base directory where you store your less, sass, css, and js files. This script expects the directory structure shown below.
 
-    <static option>
+    <static dir>
     ├── css
     │   ├── blah.css
     │   └── blah.min.css

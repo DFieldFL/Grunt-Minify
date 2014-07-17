@@ -40,15 +40,12 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        sass: {
+        compass: {
             dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= paths.sass %>',
-                    src: ['**/*.scss'],
-                    dest: '<%= paths.css %>',
-                    ext: '.css'
-                }]
+                options: {
+                    sassDir: '<%= paths.sass %>',
+                    cssDir: '<%= paths.css %>'
+                }
             }
         },
         uglify: {
@@ -77,7 +74,7 @@ module.exports = function (grunt) {
         watch: {
             css: {
                 files: ['<%= paths.sass %>**/*.scss', '<%= paths.less %>**/*.less'],
-                tasks: ['clean:cssAll', 'sass', 'less', 'cssmin']
+                tasks: ['clean:cssAll', 'compass', 'less', 'cssmin']
             },
             js: {
                 files: ['<%= paths.js %>**/*.js', '!<%= paths.js %>**/*.min.js'],
@@ -87,7 +84,7 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -96,5 +93,5 @@ module.exports = function (grunt) {
     grunt.registerTask('cleanAll', ['clean']);
     grunt.registerTask('cleanCss', ['clean:css']);
     grunt.registerTask('cleanJsMin', ['clean:jsMin']);
-    grunt.registerTask('buildAll', ['clean', 'sass', 'less', 'cssmin', 'clean:css', 'uglify']);
+    grunt.registerTask('buildAll', ['clean', 'compass', 'less', 'cssmin', 'clean:css', 'uglify']);
 }

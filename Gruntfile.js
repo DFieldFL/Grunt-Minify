@@ -16,17 +16,26 @@ module.exports = function (grunt) {
             cssAll: {
                 expand: true,
                 cwd: '<%= paths.css %>',
-                src: ['**/*.css']
+                src: ['**/*.css'],
+                options: {
+                  force: true
+                }
             },
             css: {
                 expand: true,
                 cwd: '<%= paths.css %>',
-                src: ['**/*.css', '!**/*.min.css']
+                src: ['**/*.css', '!**/*.min.css'],
+                options: {
+                  force: true
+                }
             },
             jsMin: {
                 expand: true,
                 cwd: '<%= paths.js %>',
-                src: ['**/*.min.js']
+                src: ['**/*.min.js'],
+                options: {
+                  force: true
+                }
             }
         },
         less: {

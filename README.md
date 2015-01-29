@@ -1,7 +1,7 @@
 # grunt-minify
 
 ## Installation and Setup
-1. Install Nodejs / npm
+1. Install Nodejs / npm. I recomment using nvm https://github.com/creationix/nvm
 2. Install Ruby (rbenv install only https://gorails.com/setup/ubuntu/14.04#ruby-rbenv)
 3. Install Bundler `gem install bundler`
 4. Clone repo
